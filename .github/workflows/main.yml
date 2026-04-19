@@ -17,3 +17,15 @@ jobs:
           echo "$ENV_WORKFLOW"
           echo "$ENV_JOB"
           echo "$ENV_ACTION"
+  teste-env-dois:
+    runs-on: ubuntu-latest
+    env:
+      ENV_JOB: "Valor env do job teste dois"
+
+    steps:
+      - name: Execução
+        env:
+          ENV_ACTION: "env da minha action"
+        run: |
+          echo "$ENV_WORKFLOW"
+          echo "$ENV_JOB"
